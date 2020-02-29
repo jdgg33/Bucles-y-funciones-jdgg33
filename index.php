@@ -59,5 +59,26 @@ $arreglo=array("Juan","Maria","James","Sandra","David");
 foreach($arreglo as $valor){    
     echo("El Nombre es : ".$valor."<br>");
 }
+echo("<br><br>................................<br><br>");
+
+//ARREGLOS MULTIDIMENSIONALES
+//Los arreglos multidimensionales son una estructura de datos que reúnen conjuntos de arreglos convencionales o unidimensionales
+//Es una matriz con filas y columnas.
+//Estructura
+
+$usuario=array('usuario1'=>array('Nombre'=>"Juan",'Edad'=>20,'Genero'=>"Masculino"),
+                'usuario2'=>array('Nombre'=>"Maria",'Edad'=>22,'Genero'=>"Femenino"),
+                'usuario3'=>array('Nombre'=>"James",'Edad'=>24,'Genero'=>"Masculino"),
+                'usuario4'=>array('Nombre'=>"Sandra",'Edad'=>26,'Genero'=>"Femenino"),
+                'usuario5'=>array('Nombre'=>"David",'Edad'=>28,'Genero'=>"Masculino"));
+
+foreach($usuario as $clavemayor=>$usuario){    
+echo ("<br>La clave es : ".$clavemayor."<br>");
+foreach ($usuario as $clave=>$valor){
+echo("El Nombre es : ".$valor."<br>");
+}
+}
+echo("<br><br>................................<br><br>");
+
 
 ?>
