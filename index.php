@@ -1,4 +1,8 @@
 <?php
+//Se adiciona el include para llamar informacion de otro archivo php, en este caso funciones
+
+include("funciones.php");
+
 
 echo("Clase 4 Bucles, Arreglos y Funciones <br><br>");
 
@@ -72,12 +76,59 @@ $usuario=array('usuario1'=>array('Nombre'=>"Juan",'Edad'=>20,'Genero'=>"Masculin
                 'usuario4'=>array('Nombre'=>"Sandra",'Edad'=>26,'Genero'=>"Femenino"),
                 'usuario5'=>array('Nombre'=>"David",'Edad'=>28,'Genero'=>"Masculino"));
 
-foreach($usuario as $clavemayor=>$usuario){    
-echo ("<br>La clave es : ".$clavemayor."<br>");
-foreach ($usuario as $clave=>$valor){
-echo("El Nombre es : ".$valor."<br>");
+
+echo("<br><br>................................<br><br>");
+print_r($usuario);
+
+echo("<br><br>................................<br><br>");
+
+//Ciclo foreach para acceder a los elementos del arreglo multidimensional
+
+// foreach($usuario as $clavemayorunidimensionales=>$usuario){    
+//     echo ("<br>La clave mayor unidimensional es : ".$clavemayorunidimensionales."<br>");
+//     foreach ($usuario as $clave=>$valor){
+//     echo($clave." es : ".$valor."<br>");
+//     }
+// }
+// echo("<br><br>................................<br><br>");
+
+
+foreach($usuario as $clavemayorunidimensional=>$arregloUnidimensional){    
+    echo ("<br>La clave mayor unidimensional es : ".$clavemayorunidimensional."<br>");
+    print_r($arregloUnidimensional);
+    echo("<br>");
+    foreach ($arregloUnidimensional as $claves=>$valores){
+    echo($claves." es : ".$valores."<br>");
+    }
 }
-}
+
+echo("<br><br>................................<br><br>");
+
+//Funciones
+//Calcular la edad de dos personas
+//para llamar la funcion
+//funcion con un parametro fijo en la misma funcion, donde solo ingreso un argumento
+
+calcularedad(1981);
+
+echo("<br><br>................................<br><br>");
+
+//funcion donde se ingresan dos o mas argumentos
+
+calcularedad2(1981,2020);
+
+echo("<br><br>................................<br><br>");
+
+$edad3=calcularedad3(1981,2020);
+echo("La edad de la persona es: ".$edad3);
+
+echo("<br><br>................................<br><br>");
+
+//Arreglo que se llena con una funcion
+
+$edades=array('Edad1'=>calcularedad3(1990,2020), 'Edad2'=>calcularedad3(1991,2020));
+print_r ($edades);
+
 echo("<br><br>................................<br><br>");
 
 
